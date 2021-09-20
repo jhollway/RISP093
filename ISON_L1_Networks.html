@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Social Networks Theories and Methods</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="James Hollway" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <script src="libs/clipboard/clipboard.min.js"></script>
+    <link href="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <link rel="stylesheet" href="https://cdn.githubraw.com/jhollway/iheiddown/35c73a4/inst/rmarkdown/templates/presentation/skeleton/assets/iheid-xaringan-style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Social Networks Theories and Methods
+## Networks, or How to talk networks
+### <large>James Hollway</large>
+
+---
+
+class: center, middle
+
+.pull-1[.circleon[![](https://panarchic.ch/images/team/james_hollway.jpg)]]
+.pull-1[.circleon[![](https://www.techadvisor.com/cmsdata/features/3697878/how-to-unblock-people-on-facebook-main_thumb900_1-1.png)]]
+.pull-1[.circleon[![](https://thumbs.dreamstime.com/b/digital-network-connection-icon-vector-logo-152017344.jpg)]]
+
+
+
+
+---
+class: center, middle
+# Introductions
+
+.pull-1[.circleon[![](https://panarchic.ch/images/team/james_hollway.jpg)]]
+.pull-1[.circleoff[![](https://www.techadvisor.com/cmsdata/features/3697878/how-to-unblock-people-on-facebook-main_thumb900_1-1.png)]]
+.pull-1[.circleoff[![](https://thumbs.dreamstime.com/b/digital-network-connection-icon-vector-logo-152017344.jpg)]]
+
+---
+background-image: url(https://media.giphy.com/media/lQPHNPMPZ7tcIwseGn/giphy.gif)
+background-size: contain
+
+---
+class: center, middle, inverse, iheid-red
+
+## Us
+
+.center[
+.pull-left[
+.polaroid[![:scale 45%](https://panarchic.ch/images/team/james_hollway.jpg)]
+
+James Hollway (Instructor)
+
+james.hollway@ graduateinstitute.ch
+
+Office hours: Tuesdays, 14–16
+]
+
+.pull-left[
+.polaroid[![:scale 45%](https://i1.rgstatic.net/ii/profile.image/915692249427968-1595329453525_Q512/Andrea-Biswas-Tortajada.jpg)]
+
+Andrea Biswas Tortajada (TA)
+
+andrea.biswas@ graduateinstitute.ch
+
+Office hours: Thursdays, 16–18
+]
+]
+
+---
+background-image: url(https://media.giphy.com/media/b7sNm0aR2EOqI/giphy.gif)
+background-size: contain
+
+---
+## You
+
+.pull-left[
+![](https://owl.excelsior.edu/wp-content/uploads/sites/2/2018/07/Name-Tag-1.png)
+]
+
+.pull-right[
+- Your name
+- Your area of research interest
+- One surprising thing about you
+]
+
+
+---
+## Course aims
+
+--
+
+This is an intermediate statistics course for applied researchers...
+
+--
+
+Primary goals are to:
+- identify, explain, and evaluate model choices in terms of questions
+- recognise key inferential assumptions and strategies for if they are not met 
+- apply statistical terms, concepts, and programming
+- generate, interpret, and communicate statistical findings verbally and in writing
+- use data to make evidence-based decisions
+- think critically about contemporary methodological issues
+
+--
+
+Basically I want to help with two more general problems researchers have:
+1. recognise what data and models you would need to answer the questions that you have
+1. recognise what questions you could answer with available data
+
+This course is about developing this knowledge.
+
+---
+class: left, middle
+
+.blockquote[99% of statistics only tell 49% of the story.
+
+~ Ron Delegge II]
+
+---
+## Social networks in one slide!
+
+.pull-left[
+.full-width[.content-box-blue[1: Networks, or How to talk networks]]
+
+.full-width[.content-box-blue[2: Relations, or How to find networks]]
+
+.full-width[.content-box-blue[3: Centrality, or How to stand out]]
+
+.full-width[.content-box-blue[4: Community, or How to stand together]]
+
+.full-width[.content-box-blue[5: Actors, or How to get things]]
+
+.full-width[.content-box-yellow[6: No class]]
+
+.full-width[.content-box-blue[7: Structures, or How to share things†]]
+]
+.pull-left[
+.full-width[.content-box-purple[8: How to model (weighted) networks]]
+
+.full-width[.content-box-purple[9: How to model (multilevel) networks]]
+
+.full-width[.content-box-purple[10: How to model (longitudinal) networks]]
+
+.full-width[.content-box-purple[11: How to model (time­stamped) networks]]
+
+.full-width[.content-box-orange[12: Review/Consultancies]]
+
+.full-width[.content-box-orange[13: Consultancies]]
+
+.full-width[.content-box-red[14: Posters†]]
+]
+
+---
+## Course sessions
+
+.pull-left[
+
+![:scale 45%](https://connect-assets.prosple.com/cdn/ff/D6PiKOihVG1RGFtW6g2-7R3xpRKJOWJRJHfR5U8iYlY/1572853538/public/styles/scale_and_crop_center_696x696/public/2019-09/feature-article-are-lectures-worth-attending-838x484-2018.jpg?itok=a0CCHdCk)
+
+**Lectures**, James Hollway
+
+Room: S3
+
+Tuesdays, 10:15-12:00
+
+1. Mix of conceptual and practical 
+
+1. Complementary to readings
+]
+--
+.pull-left[
+
+![:scale 45%](https://fastly.4sqi.net/img/general/600x600/495001611_MFLpPMwWuRf1til2CaaAZ7nY7B-bs_k_mVH96oXvmKs.jpg)
+
+**Lab sessions**, Andrea Biswas Tortajada
+
+Room: tbc
+
+Thursdays, 16:15-18:00
+
+1. Deepening comprehension
+
+1. DIY experience
+]
+
+---
+## Course evaluation
+
+**15% Participation** 
+- Submit 6/8 weekly exercises by noon following week, worth 20 points each
+- Download and fill in the RMarkdown template, e.g. "E1_Surname.Rmd"; ensure replicability
+- Submit answers _and_ questions about conceptual or practical matters on Moodle
+- Nonlinear grading scheme rewards all those who put the extra effort in to understand/help others understand
+
+**35% Report** 
+- Submit a short review of a statistical publication of your choice in your field
+- Check publication with us by 16th March; needs to use a method covered in class
+- Due one week after session that uses method in the paper; guidelines and grading rubric shared on Moodle
+
+**50% Project Report**
+- Submit an RMarkdown report analysing data of your choice with a method discussed during the seminar
+- Check with us by 16th April with an (ungraded) data report describing the data you are interested in
+- Due final week; will be shared online and includes grade for commenting on each others' projects
+
+---
+##  Books
+
+No single textbook for this course (everything on Moodle), but plenty of further reading...
+
+.center[
+
+&lt;img src="https://images-na.ssl-images-amazon.com/images/I/51Td+jbdxBL._SX350_BO1,204,203,200_.jpg" height="250" /&gt;&lt;img src="https://images-na.ssl-images-amazon.com/images/I/91tUgoxHdvL.jpg" height="250" /&gt;&lt;img src="https://images-na.ssl-images-amazon.com/images/I/41OzxWVXE9L._SX331_BO1,204,203,200_.jpg" height="250" /&gt;&lt;img src="https://images-na.ssl-images-amazon.com/images/I/410D1CQ5ztL._SX353_BO1,204,203,200_.jpg" height="250" /&gt;&lt;img src="https://us.sagepub.com/sites/default/files/upm-assets/105630_book_item_105630.jpg" height="250" /&gt;&lt;img src="https://media.springernature.com/w306/springer-static/cover-hires/book/978-1-4939-0983-4" height="250" /&gt;&lt;img src="https://assets.thalia.media/img/artikel/fde6e935c9f15522ee2415638f762f8b4cdd39b5-00-00.jpeg" height="250" /&gt;&lt;img src="https://assets.cambridge.org/97805213/87071/cover/9780521387071.jpg" height="250" /&gt;&lt;img src="http://assets.cambridge.org/97805218/09597/cover/9780521809597.jpg" height="250" /&gt;&lt;img src="https://images-na.ssl-images-amazon.com/images/I/41gxSQnQiXL._SX331_BO1,204,203,200_.jpg" height="250" /&gt;&lt;img src="http://assets.cambridge.org/97811088/33509/cover/9781108833509.jpg" height="250" /&gt;
+
+]
+
+---
+## Software
+
+In this class, we will use `\(\mathcal{R}\)`. It is **free**. **Flexible**. And **facilitates** more modern research.
+
+&lt;!-- ![:scale 20%](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F1%2F1b%2FR_logo.svg%2F1200px-R_logo.svg.png&amp;f=1&amp;nofb=1) --&gt;
+
+.center[
+
+&lt;img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F1%2F1b%2FR_logo.svg%2F1200px-R_logo.svg.png&amp;f=1&amp;nofb=1" height="250" /&gt;&lt;img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.rstudio.com%2Fwp-content%2Fuploads%2F2014%2F06%2FRStudio-Ball.png&amp;f=1&amp;nofb=1" height="250" /&gt;
+
+]
+
+There are many highly recommended resources for learning `\(\mathcal{R}\)` which I will share with you on Moodle,
+and Andrea will be available in case you have any questions.
+
+In the meantime, please download and install the most recent versions of both `\(\mathcal{R}\)` (the statistical software) and RStudio (a front-end which makes using R much easier).
+
+???
+
+RStudio makes it easier not only to manage what `\(\mathcal{R}\)` is doing,
+but also to run Python (e.g. for webscraping) and C++ (for faster programming),
+as well as writing assignments (like in this course), presentations, 
+even apps that help you communicate your research more widely.
+The assignments in this course will be in Rmarkdown.
+
+Basically, GUI statistical software (e.g. Excel, SPSS) [were a mistake for modern research](https://www.r-bloggers.com/2020/11/graphical-user-interfaces-were-a-mistake-but-you-can-still-make-things-right/?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+RBloggers+%28R+bloggers%29).
+
+---
+## You might also be interested in...
+
+
+.pull-left[
+.center[
+
+&lt;img src="https://raw.githubusercontent.com/snlab-ch/migraph/main/inst/migraph.png" height="250" /&gt;
+
+]
+- for analysing multimodal and multilevel networks
+  - builds on methods presented in Multimodal Political Networks
+  - under development: feedback (and help) most welcome!
+  - see [https://github.com/snlab-ch/migraph](https://github.com/snlab-ch/migraph) for more
+]
+
+--
+
+.pull-right[
+.center[
+
+&lt;img src="https://raw.githubusercontent.com/jhollway/iheiddown/main/inst/iheiddown.png" height="250" /&gt;
+
+]
+- for IHEID-style dissertations, presentations..
+  - vs Word: less corruption, crashing, or inconsistency
+  - vs `\(\LaTeX\)`: easier reading, writing, and analysis
+  - automatic figure, table, and cross-referencing
+  - includes dedications, tocs, bibliography
+  - compile chapters or thesis with auto versioning
+]
+
+
+---
+class: center, middle
+# Definitions
+
+.pull-1[.circleoff[![](https://panarchic.ch/images/team/james_hollway.jpg)]]
+.pull-1[.circleon[![](https://www.techadvisor.com/cmsdata/features/3697878/how-to-unblock-people-on-facebook-main_thumb900_1-1.png)]]
+.pull-1[.circleoff[![](https://thumbs.dreamstime.com/b/digital-network-connection-icon-vector-logo-152017344.jpg)]]
+
+---
+## Seven Bridges of Königsberg
+
+.pull-left-1[
+- Königsberg founded in 1255 by Teutonic Order
+
+- Became a wealthy port set around two islands on the Pregel River
+
+- Citizens spent Sunday afternoons walking its seven bridges
+
+- They devised a puzzle about how to cross all seven bridges only once in a single walk...
+]
+
+.pull-right-2[![:scale 120%](https://upload.wikimedia.org/wikipedia/commons/5/5d/Konigsberg_bridges.png)]
+
+---
+## Read Euler...
+
+.pull-left[
+- Luckily, Königsberg not too far from St Petersburg, where the Swiss polygraph Leonard .red[Euler] lived
+
+- Euler educated in Basel by one of the famous .red[Bernoulli] family, Johann
+
+- After failing to get a position in Basel, he followed Johann’s sons, Niklaus and Daniel, to St Petersburg
+
+- Niklaus died and Daniel returned to Basel in 1733, and Euler inherited their positions
+
+&gt; “Lisez Euler, lisez Euler, c'est notre maître à tous”
+~ Laplace
+]
+
+.pull-right[![:scale 80%](https://www.scienceabc.com/wp-content/uploads/ext-www.scienceabc.com/wp-content/uploads/2017/12/Leonhard-Euler.jpg-.jpg)]
+
+---
+## Why bother?
+
+.pull-left[
+- When the mayor of Danzig wrote him for a solution he replied:
+  - “. . . I do not understand why you expect a mathematician to produce [a solution...], for the solution is based on reason alone, and its discovery .red[does not depend on any math]ematical principle.”
+  
+- Yet, later that year he admitted to an Italian mathematician:
+  - “This question is so banal, but seemed to me worthy of attention in that .red[[neither] geometry, nor algebra, nor even the art of counting was sufficient] to solve it.”
+  
+- He saw the problem related to what Leibniz called .red[geometria situs], or the geometry of position...
+]
+
+.pull-right[![:scale 80%](https://www.scienceabc.com/wp-content/uploads/ext-www.scienceabc.com/wp-content/uploads/2017/12/Leonhard-Euler.jpg-.jpg)]
+
+---
+## Bad for Königsberg, Great for graph theory
+
+.center[![:scale 55%](https://divisbyzero.files.wordpress.com/2008/09/konigsberggraph.jpg)
+]
+
+- In 1735, Euler founded .red[graph theory] by proving no solution to the problem
+
+- Proof consisted of two steps:
+  - First, route inside each land mass irrelevant, only the connections,
+  meaning he could *abstract* to a graph of .red[nodes] connected by .red[ties]
+  - Second, in unique path no more than 2 nodes should have an odd .red[degree] (#ties) -- 
+  if enter, also need to leave, so intermediate nodes must be even
+  - Since all nodes had odd degrees, no way of solving the problem
+
+---
+## History
+
+- Delitsch (1900) on reciprocity
+- Simmel (1908) on formal sociology
+- Moreno (1934) on sociometry
+- Rapoport (1953a,b), Davis (1970) on transitivity
+- Bonacich (1972a,b) on eigenvector centrality
+- Holland and Leinhardt (1976) on triad census (3-node motifs)
+- 1978 journal *Social Networks*, founding editor Linton C. Freeman
+- Freeman (1979) on various centrality concepts (betweenness!)
+- Holland and Leinhardt (1981) on p1 model
+- Frank and Strauss (1986) on Markov graphs (basis of ERGMs)
+- Wasserman and Faust (1994) textbook
+- Wasserman and Pattison (1996) on p∗ model = ERGM
+- Snijders (1996) on SAOMs
+
+--
+
+Social Network Analysis (SNA) interdisciplinary with basis in sociology, anthropology, mathematics, social psychology,
+public policy, and increasingly political science and international relations.
+
+.footnote[See Freeman (2004)]
+
+---
+## What is/are “social networks”?
+
+--
+.pull-left-1[![:scale 65%](https://thedigitalhealthsociety.com/wp-content/uploads/2019/05/Facebook-1.png)]
+.pull-right-2[
+- Not **a** social network
+  - not a type of actor, but structures
+]
+
+--
+.pull-left-2[
+- Not a social **network**
+  - not a type of structure, but any structure
+]
+.pull-right-1[![](https://databigandsmalldotcom.files.wordpress.com/2016/04/hierarchymktnetwork.png)]
+
+--
+.pull-left-1[![](https://images05.military.com/sites/default/files/styles/full/public/2018-08/inigo_montoya_1200x800.jpg?itok=D1PNX-Hv)]
+.pull-right-2[
+- Not a **social** network
+  - not any structure of a specific type of relation, but structures of any relations
+]
+
+---
+class: middle
+
+.pull-left[
+.center[
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Graph_betweenness.svg/220px-Graph_betweenness.svg.png)
+]]
+
+.pull-right[
+Social networks concerns the abstraction, theorising, and analysis of relations into structures.
+
+Relations can be key to understanding (changes in)
+
+- macro-structures or micro-structures
+- the distribution of attributes within those structures
+- or even what those structures consist of
+]
+
+---
+class: center, middle
+
+![](https://www.seekpng.com/png/detail/783-7835409_contemporary-social-network-analysis-was-formalized-analyze-the.png)
+
+---
+## Terminology
+
+- .red[Graph] or .red[network], `\(G = (V, E)\)`
+- .red[Vertices] or .red[nodes] from a .red[node set] or .red[mode], `\(V = \{a,b,c,...\}\)`
+- .red[Edges] or .red[ties] (also links, lines, connections, arcs), `\(E = \{\{a,b\}, \{b,c\}, ...\}\)`
+
+--
+
+.pull-left-1[
+
+- (un)directed
+- (un)weighted
+- (un)labelled
+- (un)signed
+- simple/complex
+- multiplex
+- multimodal
+- multilevel
+- cross-sectional/longitudinal/event
+]
+
+.pull-right-2[
+![](https://www.researchgate.net/publication/347300725/figure/fig1/AS:969208926044162@1608088823984/Different-types-of-graphs-and-their-corresponding-adjacency-matrix-representations-The.ppm)
+]
+
+---
+.pull-left-3[
+- .red[graphs] pretty and easy to interpret
+- quickly difficult to discern though and results may vary...
+]
+
+.center[![:scale 55%](ISON_L1_Networks_files/figure-html/GraphMat.png)]
+
+.pull-left[
+- .red[edgelists] 2(+) (ordered) columns of numbered/labelled pairs
+- easy in Excel, incl. attributes, and memory efficient
+- more complicated data, statistics, and analysis difficult though
+]
+
+.pull-right[
+- .red[matrices]' rows are senders and cols recipients
+- memory inefficient for sparse networks and somewhat incomprehensible
+- encodes all relational info and quick, flexible analysis
+]
+
+???
+
+- dimensions
+- density
+- outdegrees
+- indegrees
+- isolates
+- reciprocity
+- transitivity
+
+---
+class: center, middle
+# Vocabulary
+
+.pull-1[.circleoff[![](https://panarchic.ch/images/team/james_hollway.jpg)]]
+.pull-1[.circleoff[![](https://www.techadvisor.com/cmsdata/features/3697878/how-to-unblock-people-on-facebook-main_thumb900_1-1.png)]]
+.pull-1[.circleon[![](https://thumbs.dreamstime.com/b/digital-network-connection-icon-vector-logo-152017344.jpg)]]
+
+---
+class: middle
+
+## Describing networks
+
+*What could this network be of? How would you describe the structure? The position of circles and lines?*
+
+
+
+
+
+.pull-left[
+![](ISON_L1_Networks_files/figure-html/plotting-1.png)
+]
+
+--
+
+.pull-right[
+- type
+- dimensions
+- density
+- distance
+- outdegree
+- indegree
+- isolates
+- dyad: reciprocity
+- triad: transitive, cycle
+- cliques, components, communities
+]
+
+???
+
+- same group of actors (some composition change allowed)
+- same relational variable (states, not events)
+- some, but not too much change...
+
+The data used are from the Children of Immigrants Study,
+(c) MZES Mannheim, Manfred Kalter. 
+
+- social network ties are costly? (low outdegree)
+- individuals form and maintain reciprocal ties?
+- transitivity leads to clustering
+- status hierarchy shapes friendship networks (ties to popular actors)
+- gender/ethnic homophily?
+
+---
+## Levels of analysis
+
+.pull-left[
+![](ISON_L1_Networks_files/figure-html/plotting-1.png)
+]
+
+--
+
+.pull-right[
+- .red[Network level] `\((O=1)\)`
+  - e.g. is this network centralized?
+  
+- .red[Dyad level] `\((O = n(n-1)/2)\)`
+  - e.g. are similar nodes connected?
+  
+- .red[Node level] `\((O = n)\)`
+  - e.g. are some nodes more popular than others?
+]
+
+---
+## Types of analysis
+
+.pull-left[
+![](ISON_L1_Networks_files/figure-html/plotting-1.png)
+]
+
+--
+
+.pull-right[
+- Network as .red[independent variable]
+  - i.e. (how) do ties explain attributes?
+  - e.g. is the network structure responsible for who gets what?
+  
+- Network as .red[dependent variable]
+  - i.e. (how) do attributes explain ties?
+  - e.g. is who has what responsible for the network structure?
+  
+- Network as .red[interdependent variable]
+  - i.e. (how) do attributes and ties coevolve?
+  - e.g. are there positive or negative feedback loops?
+]
+
+---
+## Dynamic analysis
+
+
+
+![](ISON_L1_Networks_files/figure-html/plotboth-1.png)
+
+- How do we get from `\(t_1\)` to `\(t_2\)`?
+  - e.g. is it popularity, reciprocity, transitivity, or homophily?
+
+---
+## Social Networks
+
+**Assumption**: social life is associative, and relations are meaningful
+
+**Premise**: how social entities are connected matters
+
+**Argument**: more interdependent and contextual than traditional quantitative or qualitative work
+  - By taking context and dependencies into account, even making them central to the explanation,
+  networks goes beyond traditional statistics
+  - By using graph theoretic concepts and formal measures, even scaling them to large settings,
+  networks goes beyond traditional case studies
+
+**Promise**: to help understand social, relational life
+
+---
+.pull-left[
+### Don’t “do networks” to
+
+- join .red[hot research area] (though it is)
+- present .red[fancy pictures] (seldom enough)
+- present .red[fancy analysis] (depends on data quality)
+- .red[explain more variance] (not simply an add-on)
+- .red[explain everything] (empirical settings are messy)
+- use .red[big data] (RQ and theory relationship required)
+- use .red[networks expertise] (clear motivation required)
+]
+
+--
+.pull-right[
+### Do “do networks” to
+
+- .red[describe social structures], both local and global
+- .red[identify individuals] in specal positions
+- correlate .red[positions with individual outcomes]
+- correlate .red[structures with global outcomes]
+- explain .red[how individuals affect social structure]
+- explain .red[how social structure affects individuals]
+- understand .red[how micro and macro outcomes relate]
+- understand .red[how different networks relate]
+- understand .red[how different mechanisms change or sustain social systems]
+]
+
+---
+class: center, middle
+# Summary
+
+.pull-1[.circleon[![](https://panarchic.ch/images/team/james_hollway.jpg)]]
+.pull-1[.circleon[![](https://www.techadvisor.com/cmsdata/features/3697878/how-to-unblock-people-on-facebook-main_thumb900_1-1.png)]]
+.pull-1[.circleon[![](https://thumbs.dreamstime.com/b/digital-network-connection-icon-vector-logo-152017344.jpg)]]
+
+--
+
+.pull-left[.pull-down[What questions do you have for me?]]
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>`"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
