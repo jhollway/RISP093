@@ -317,3 +317,255 @@ Respondent-driven sampling (RDS) aims to mitigate some of these concerns by weig
 - Longitudinal (panels)
 - Continuous (events)
 
+---
+class: center, middle
+# Data
+
+.pull-1[.circleoff[![](https://i.pinimg.com/originals/8a/08/f1/8a08f1d673c8b64ddb067de8d8d879d8.jpg)]]
+.pull-1[.circleoff[![](https://cdn.imgbin.com/14/23/6/imgbin-people-connected-tXALjkJraJY0PjsUKek18tXrH.jpg)]]
+.pull-1[.circleon[![](https://previews.123rf.com/images/ashasha/ashasha2006/ashasha200600654/148948666-question-marks-scattered-on-white-background-quiz-doubt-poll-survey-faq-interrogation-query-backgrou.jpg)]]
+
+---
+## Sources
+
+.pull-left[
+#### Self-reports
+- Surveys (e.g. Hogan et al 2016)
+  - using e.g. [Network Canvas](https://networkcanvas.com)
+  - name generators vs rosters
+- Interviews (e.g. Bellotti 2014)
+
+#### Constructions
+- Web-scraping
+  - Chrome or Firefox extensions
+  - Rcrawler, rvest and vosonSML packages 
+  - Python (e.g. to access Twitter API)
+- Manual/automatic text coding  
+  - Considerable literature-based datasets
+  - Can extract relationships (e.g. similarities) in or across documents
+]
+
+.pull-right[
+#### Observation
+- Participant observation (e.g. Wyatt et al 2011) 
+- RFID badges (e.g. Elmer et al 2018)
+
+#### Archives
+- Individual
+  - Diary research (e.g. Fu 2008)
+  - Historical records (e.g. Padgett &amp; Ansell 1993) 
+  - Social media (e.g. Golder et al 2007)
+  - Communication logs (e.g. Goldberg et al 2016)
+- Organizational
+  - Publication or patent records (e.g. Lazega et al 2008, Goetze 2010)
+  - Agreement data between countries (e.g. Hollway and Koskinen 2016)
+]
+
+???
+
+- Network Canvas - beta/open source
+- egoweb 2.0 (David Kennedy at Rand) - free/open source
+- RedCap - one week free trial
+- Limesurvey - free-`$$`; installing on Institute server requires IT
+- Qualtrics - limited account free; advanced features `$$`
+- Can include a JavaScript autocomplete function (Timon Elmer)
+- ONA Surveys - limited export free, range of export formats by subscription
+- Voxco (Jason Diasno) - `$$`
+- Socioworks - `$$`
+- Kronenwett &amp; Adolphs - `$$$`
+- DatStat Illume Next (Michelle Loxley)
+
+---
+background-color: #96BCC6
+
+.pull-left[
+## Ethical concerns
+
+- Consider study ethics from initial research design
+  - IRB reviews
+  - Report in publications
+  
+- Study participation needs
+  - voluntary, informed consent
+  - minimal intrusiveness
+  - appropriate protections of privacy
+  
+- One of the main advantages of networks is also a source of greatest ethical concern...
+  - _what is it?_
+]
+
+.pull-right[![](https://talkroute.com/wp-content/uploads/2016/02/ethical-business-talkroute-e1456238028542.jpg)]
+
+---
+
+.pull-left[.center[![:scale 75%](https://www.researchgate.net/profile/Dorothy-Espelage/publication/314204848/figure/fig1/AS:643801722912768@1530505700607/Visualization-of-missing-social-network-data-Nodes-represent-individuals-and-directed.png)]]
+
+.pull-right[
+## Missing data
+
+- Unfortunately, even a small fraction of missing observations could significantly bias network structure
+
+  - A single non-response in a large survey is `\(1\)` missing observation
+  
+  - A single non-response in networks is `\(n-1\)` missing observations
+  
+  - Moreover, often not missing at random...
+  
+.footnote[de la Haye 2017]
+]
+  
+---
+## Demanding data
+
+.pull-left[
+- Networks is demanding of data
+  - But true of all attempts at providing persuasive evidence for causality
+  
+- Where data comes from is crucial because:
+  - how meaningful your descriptive or inferential conclusions depends on tie-data being meaningful
+  
+- So, with an eye to your final report, think about where you might get as meaningful, complete, whole-network data, ideally over time (as granular as possible) and with plenty of additional data on other ties and other attributes...
+
+- No big deal, right?
+]
+  
+.pull-right[![](https://memegenerator.net/img/instances/75304621.jpg)]
+  
+---
+class: center, middle
+# Summary
+
+.pull-1[.circleon[![](https://i.pinimg.com/originals/8a/08/f1/8a08f1d673c8b64ddb067de8d8d879d8.jpg)]]
+.pull-1[.circleon[![](https://cdn.imgbin.com/14/23/6/imgbin-people-connected-tXALjkJraJY0PjsUKek18tXrH.jpg)]]
+.pull-1[.circleon[![](https://previews.123rf.com/images/ashasha/ashasha2006/ashasha200600654/148948666-question-marks-scattered-on-white-background-quiz-doubt-poll-survey-faq-interrogation-query-backgrou.jpg)]]
+
+--
+
+.pull-left[.pull-down[What questions do you have for me?]]
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>`"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
