@@ -4,3 +4,4 @@
 *.rdx
 ISON_L1_Networks_cache/
 ISON_L2_Relations_cache/*
+ISON_L3_Centrality_cache/*
