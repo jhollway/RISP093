@@ -50,11 +50,13 @@ class: center, middle
 .pull-1[.circleoff[![](https://static.thenounproject.com/png/3120664-200.png)]]
 
 ---
-## What is 'centrality'?
+## What is ‘centrality’?
 
-- Being central in a network is a core concept in networks research
+Being central in a network is a central concept in networks research...
 
-- Why could “being central” be important...
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRYdGQnVNT9XMKmui2UXPFtMEa7Gx1Ao7cEevLYvQ-hxTvO6huAUIUAmLRWRr9i2mC5So&amp;usqp=CAU)
+
+Why could “being central” be important...
   - in your private life?
   - in your professional life?
   - in a social network from your field of interest?
@@ -63,14 +65,24 @@ class: center, middle
 ## Centrality questions
 
 - Does a node have access to lots of resources?
+
 - Does a node have access to different resources?
+
 - Does a node connect different parts of the network?
+
 - Does a node control the interaction between other nodes?
+
 - Would the failure of a node cause a system to collapse?
+
 - Is a node considered popular by others?
+
 - Which nodes’ esteem matters?
 
 ---
+background-image: url(https://www.epfl.ch/research/domains/transportation-center/wp-content/uploads/2019/03/iStock-warning-1024x576.jpg)
+background-size: contain
+
+.pull-right-1[
 ## Warning
 
 Not one kind of centrality
@@ -80,9 +92,10 @@ Many, with several in regular use
 - Closeness
 - Betweenness 
 - Eigenvector 
--...
+- ...
 
 They need to be deployed with care, *theoretically*...
+]
 
 ---
 background-image: url(https://i1.wp.com/beinspired.no/wp-content/uploads/2018/09/Periodic-table-Centrality.gif?resize=997%2C540)
@@ -131,19 +144,21 @@ background-image: url(https://i1.wp.com/beinspired.no/wp-content/uploads/2018/09
 ---
 ### Do you have more or fewer friends than your friends?
 
+--
+
 Option 1: Data collection
 
-- go on Facebook, count how many "friends" you have
-- click on every one of those "friends" and see how many "friends" they have
+- go on Facebook, count how many “friends” you have
+- click on every one of those “friends” and see how many “friends” they have
 - get a late dinner...
 
 --
 
 Option 2: Graph theory
 
-$$ \frac{\sum d_v}{n} $$
+&lt;!-- $$ \frac{\sum d_v}{n} $$ --&gt;
 
-$$ \frac{\sum d_v^2}{\sum d_v} $$
+&lt;!-- $$ \frac{\sum d_v^2}{\sum d_v} $$ --&gt;
 
 $$ \frac{\sum d_v^2}{\sum d_v} ≥ \frac{\sum d_v}{n} $$ q.e.d.
 
@@ -258,9 +273,6 @@ AKA .red[radial] centrality
 
 `$$c_{C}(i) = \frac{1}{\sum_{j \in V} d(i,j)}$$`
 
-- `\(\delta(j,k|i)\)`: fraction of shortest paths from `\(j\)` to `\(k\)` with `\(i\)` being an intermediate node
-- naïve calculation complex
-
 ]
 
 .pull-right[
@@ -365,7 +377,7 @@ Ultimately ordinal, not interval, scale: there is no "unit of centrality"
 
 ---
 class: center, middle
-# Centralization
+# Centralisation
 
 .pull-1[.circleoff[![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRYdGQnVNT9XMKmui2UXPFtMEa7Gx1Ao7cEevLYvQ-hxTvO6huAUIUAmLRWRr9i2mC5So&amp;usqp=CAU)]]
 .pull-1[.circleon[![](https://static.thenounproject.com/png/1653609-200.png)]]
