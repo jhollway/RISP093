@@ -241,6 +241,247 @@ mode network
 
 ---
 class: center, middle
+# Community
+
+.pull-1[.circleoff[![](https://image.flaticon.com/icons/png/512/268/268546.png)]]
+.pull-1[.circleon[![](https://theairtravelgroup.com/wp-content/uploads/group-icon-1024x1024.png)]]
+.pull-1[.circleoff[![](https://i.pinimg.com/originals/46/e4/fd/46e4fdf9d21b857e2511a3483d6780b7.png)]]
+
+---
+## How many ‘groups’ in this network?
+
+
+
+.pull-left[
+&lt;img src="ISON_L4_Community_files/figure-html/plotting-1.png" width="504" /&gt;
+]
+
+.pull-right[
+- weak vs strong components
+  - 2 (weak) components
+  - 3 (strong) components
+
+- more ‘clusters’ here?
+]
+
+---
+## Two strategies
+
+.pull-left[
+### Faction analysis
+
+- .red[deductive]: predetermine number of subgroups
+- algorithm tries to maximise density within subgroups by permuting observed matrix
+- compare to perfectly maximised ideal type
+]
+
+.pull-right[
+### Community detection
+
+- .red[inductive]: identify an appropriate number and membership of groups from observed network
+- try to maximise “modularity” criterion
+- by undertaking a certain method...
+]
+
+---
+## What are communities?
+
+.center[![:scale 25%](https://www.pnas.org/content/103/23/8577/F1.large.jpg)]
+
+- Communities are densely connected (+ within-group), and well-separated (- between-group)
+- Includes info about internal structure (like cliques) and external structure (like components)
+- They define and affect groups, networks, and individuals
+
+---
+### Examples
+
+&lt;img src="ISON_L4_Community_files/figure-html/commegs-1.png" width="1152" /&gt;
+
+???
+
+- semantic mappings
+- neurological mappings
+
+---
+## Modularity
+
+.pull-left[
+
+.center[![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Network_Community_Structure.svg/220px-Network_Community_Structure.svg.png)]
+
+`$$Q = \sum_{c=1}^k (e_{cc} - a_c^2)$$`
+
+- Simplified expression (see
+Fortunato 2010: 89) for the .red[modularity criterion] `\(Q\)`, where:
+  - `\(e_{cc}\)` is % edges within a cluster `\(c\)`
+  - `\(a_c^2\)` is the expected % of ties within the cluster in a random graph with the same degrees
+
+]
+
+.pull-right[
+
+- Always &lt; 1 but can be negative
+  - 0 when whole graph is taken as a single community, i.e. edges randomly distributed 
+  - Negative modularity means less community structure than random, e.g. multipartite structure
+  
+- Modularity grows larger if better separated groups or graph gets larger, 
+so do not use to compare graphs of different sizes...
+
+- Partitioning graphs into `\(c\)` components .red[NP-hard] (computationally difficult) problem
+  - Finding optimal solution not always possible
+  - Need an .red[algorithm] (a set of rules) by which we can identify community memberships until we find the allocation that maximises `\(Q\)`
+]
+
+---
+## Data and Algorithms
+
+.pull-left[
+&lt;img src="ISON_L4_Community_files/figure-html/karate-1.png" width="504" /&gt;
+]
+
+.pull-right[
+- Random
+  - Label assignment e.g. .red[Kernighan-Lin]
+  - Walks e.g. .red[Walktrap]
+  
+- Divisive
+  - Hierarchical decomposition e.g. .red[Edge-Betweenness]
+  
+- Agglomerative
+  - Hierarchical composition e.g. .red[Fast-Greedy]
+]
+  
+---
+.pull-left[
+### Kernighan-Lin algorithm
+
+&lt;img src="ISON_L4_Community_files/figure-html/klc-1.png" width="504" /&gt;
+]
+
+.pull-right[
+Intuition: swap group label assignment
+1. Start: full network with random (usually two) group assignment
+2. Identify: node-group-switch would increase `\(Q\)` the most
+3. Modify: that node’s group assignment
+4. Repeat: steps 2-3
+5. Stop: when no switch increases `\(Q\)`
+
+.pull-left[
+Pros
+- Quick and easy
+- Similar to faction analysis
+]
+
+.pull-right[
+Cons
+- Depends on initial distribution
+- Requires predetermined number of communities
+- Does not always find the best solution
+]
+]
+
+---
+.pull-left[
+### Edge-betweenness algorithm
+
+&lt;img src="ISON_L4_Community_files/figure-html/ebc-1.png" width="504" /&gt;
+]
+
+.pull-right[
+Intuition: full start and divide
+1. Start: with full network and a single community
+2. Identify: edge with highest edge-betweenness (bridge)
+3. Modify: delete that edge and identify any resulting components as a community
+4. Repeat: steps 2-3
+5. Stop: when no better `\(Q\)` is obtained by any edge deletion
+
+.pull-left[
+Pros
+- Clear logic based on information propagation
+- No random variation
+]
+
+.pull-right[
+Cons
+- Does not necessarily maximise modularity
+- Calculation of edge betweenness slow
+- Does not always find the best solution
+]
+]
+
+---
+.pull-left[
+### Fast-greedy algorithm
+
+&lt;img src="ISON_L4_Community_files/figure-html/fgc-1.png" width="504" /&gt;
+]
+
+.pull-right[
+Intuition: empty start and agglomerate
+1. Start: empty graph and each node its own community
+2. Identify: evaluate which merger of two adjacent nodes would increase `\(Q\)` the most
+3. Modify: assign same community to all merged nodes
+4. Repeat: steps 2-3
+5. Stop: when merging decreases `\(Q\)`
+
+.pull-left[
+Pros
+- Quick and possible to use on larger graphs
+- Gives a dendrogram of the hierarchical clustering
+- Most fun to watch at work
+]
+
+.pull-right[
+Cons
+- Not good at detecting smaller communities, tends to quickly form larger communities
+]
+]
+
+&lt;!-- Plot comparing outcomes --&gt;
+
+---
+## Community detection algorithms
+
+Algorithm | Reference | Type | W | D | M | H
+---|---|---|---|---|---|---
+Label propagation | Raghavan et al. 2007 | Assignment | X |  |  | 
+Spin glass | Reichhardt &amp; Bornholdt 2006 | Assignment | X |  | X | 
+Walk trap | Pons &amp; Latapy 2005 | Random walks | X |  |  | X
+Info map | Rosvall &amp; Bergstrom 2008 | Random walks | X | X |  | X
+Leading eigenvector | Newman 2006 | Hier. Decomposition | | | X |
+Edge betweenness | Newman &amp; Girvan 2004 | Hier. Decomposition | X | X | X | X
+Fast greedy | Clauset et al. 2004 | Hier. Composition | X |  | X | X
+Multilevel | Blondel et al. 2008 | Hier. Composition | X |  | X | 
+Optimal | Brandes et al. 2008 | Problem solving | X | X | X | 
+
+---
+## Resolution limits
+
+.pull-left[
+![](http://www.traag.net/wp/wp-content/uploads/2013/08/res-limit-free.png)
+]
+
+.pull-right[
+- Possibility of
+  - breaking up large communities
+  - missing smaller communities
+
+- May depend on network size
+  - Larger the network, more likely that modularity increased while ignoring smaller communities
+  - Called a .red[resolution limit] and is a _problem_
+]
+
+---
+## Community detection summary
+
+- Difficult to find the “right” answer
+  - Many possible, sensible approaches, but hard to know what will be best for your purpose
+  
+- A weakness is that many tools lack rigorous theoretical underpinnings
+  - A fun line of research, because anything that works is a valid solution
+
+---
+class: center, middle
 # Summary
 
 .pull-1[.circleon[![](https://image.flaticon.com/icons/png/512/268/268546.png)]]
