@@ -1,0 +1,15 @@
+date,author,type
+1900,"Delitsch on reciprocity",Closure
+1908,"Simmel on formal sociology",Discipline
+1934,Moreno on sociometry,Discipline
+1953,Rapoport on transitivity,Closure
+1970,Davis on transitivity,Closure
+1972,Bonacich on eigenvector centrality,Centrality
+1976,Holland & Leinhart on triad census,Models
+1978,Freeman founds *Social Networks*,Discipline
+1979,Freeman on betweenness centrality,Centrality
+1981,Holland & Leinhart on p1 model,Models
+1986,Frank & Strauss on Markov graphs,Models
+1994,Wasserman & Faust textbook,Discipline
+1996,Wasserman & Pattison on p* model,Models
+2001,Snijders on SAOMs,Models

@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Social Networks Theories and Methods</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="James Hollway" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <script src="libs/clipboard/clipboard.min.js"></script>
+    <link href="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <link rel="stylesheet" href="https://cdn.githubraw.com/jhollway/iheiddown/35c73a4/inst/rmarkdown/templates/presentation/skeleton/assets/iheid-xaringan-style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Social Networks Theories and Methods
+]
+.subtitle[
+## How to find and talk about networks
+]
+.author[
+### <large>James Hollway</large>
+]
+
+---
+
+class: center, middle
+
+.pull-1[.circleon[![](https://panarchic.ch/images/team/james_hollway.jpg)]]
+.pull-1[.circleon[![](https://globalquiz.org/media/pic/400/8340.jpg)]]
+.pull-1[.circleon[![](https://thumbs.dreamstime.com/b/digital-network-connection-icon-vector-logo-152017344.jpg)]]
+
+
+
+---
+# Course sessions
+
+.pull-left[
+
+.polaroid[![:scale 45%](https://panarchic.ch/images/team/james_hollway.jpg)]
+
+**Lectures**, [James Hollway](mailto:james.hollway@graduateinstitute.ch)
+
+Wednesdays, 14-16, S7
+
+Office hours Fridays, 10-12
+
+1. Mix of conceptual and practical
+
+1. Complementary to readings
+]
+--
+.pull-left[
+
+.polaroid[![:scale 45%](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fjdi-switzerland.weebly.com%2Fuploads%2F9%2F8%2F0%2F2%2F98020646%2Fpublished%2Fdsc-0484.jpg%3F1603886744&amp;f=1&amp;nofb=1)]
+
+**Lab overflows**, [Zakaria Imessaoudene](mailto:zakaria.imessaoudene@graduateinstitute.ch)
+
+Tuesdays, 14-16, tbc
+
+1. Deepening comprehension
+
+1. DIY experience
+]
+
+---
+background-image: url(https://media.giphy.com/media/b7sNm0aR2EOqI/giphy.gif)
+background-size: contain
+
+---
+class: center, middle
+# Definitions
+
+.pull-1[.circleon[![](https://globalquiz.org/media/pic/400/8340.jpg)]]
+.pull-1[.circleoff[![](https://cdn.imgbin.com/14/23/6/imgbin-people-connected-tXALjkJraJY0PjsUKek18tXrH.jpg)]]
+.pull-1[.circleoff[![](https://i.pinimg.com/originals/8a/08/f1/8a08f1d673c8b64ddb067de8d8d879d8.jpg)]]
+
+---
+## Seven Bridges of Königsberg
+
+.pull-left-1[
+- Königsberg founded in 1255 by Teutonic Order
+
+- Became a wealthy port set around two islands on the Pregel River
+
+- Citizens spent Sunday afternoons walking its seven bridges
+
+- They devised a puzzle about how to cross all seven bridges only once in a single walk...
+]
+
+.pull-right-2[![:scale 120%](https://upload.wikimedia.org/wikipedia/commons/5/5d/Konigsberg_bridges.png)]
+
+---
+## Lisez Euler...
+
+--
+
+.pull-left[
+- Reply to mayor of Danzig:
+  - “. . . I do not understand why you expect a mathematician to produce [a solution...], for the solution is based on reason alone, and its discovery .red[does not depend on any math]ematical principle.”
+
+- Yet, later that year he admitted to an Italian mathematician:
+  - “This question is so banal, but seemed to me worthy of attention in that .red[[neither] geometry, nor algebra, nor even the art of counting was sufficient] to solve it.”
+
+- He saw the problem related to what Leibniz called .red[geometria situs], or the geometry of position...
+]
+
+.pull-right[![:scale 80%](https://www.scienceabc.com/wp-content/uploads/ext-www.scienceabc.com/wp-content/uploads/2017/12/Leonhard-Euler.jpg-.jpg)]
+
+---
+## Bad for Königsberg, Great for graph theory
+
+.center[![:scale 55%](https://divisbyzero.files.wordpress.com/2008/09/konigsberggraph.jpg)
+]
+
+- In 1735, Euler founded .red[graph theory] by proving no solution to the problem
+
+- Proof consisted of two steps:
+  - First, route inside each land mass irrelevant, only the connections,
+  meaning he could *abstract* to a graph of .red[nodes] connected by .red[ties]
+  - Second, in unique path no more than 2 nodes should have an odd .red[degree] (#ties) --
+  if enter, also need to leave, so intermediate nodes must be even
+  - Since all nodes had odd degrees, no way of solving the problem
+
+
+---
+## What is/are “social networks”?
+
+--
+.pull-left-1[![:scale 65%](https://thedigitalhealthsociety.com/wp-content/uploads/2019/05/Facebook-1.png)]
+.pull-right-2[
+- Not **a** social network
+  - not a type of actor, but structures
+]
+
+--
+.pull-left-2[
+- Not a social **network**
+  - not a type of structure, but any structure
+]
+.pull-right-1[![](https://databigandsmalldotcom.files.wordpress.com/2016/04/hierarchymktnetwork.png)]
+
+--
+.pull-left-1[![](https://images05.military.com/sites/default/files/styles/full/public/2018-08/inigo_montoya_1200x800.jpg?itok=D1PNX-Hv)]
+.pull-right-2[
+- Not a **social** network
+  - not any structure of a specific type of relation, but structures of any relations
+]
+
+---
+## An abbreviated history of social networks
+
+&lt;img src="ISON_L1b_Networks_files/figure-html/unnamed-chunk-1-1.png" width="1008" /&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- Social Network Analysis (SNA) interdisciplinary with basis in sociology, anthropology, mathematics, social psychology, --&gt;
+&lt;!-- public policy, and increasingly political science and international relations. --&gt;
+
+&lt;!-- .footnote[See Freeman (2004)] --&gt;
+
+---
+class: middle
+
+.pull-left[
+.center[
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Graph_betweenness.svg/220px-Graph_betweenness.svg.png)
+]]
+
+.pull-right[
+Social networks concerns the abstraction, theorising, and analysis of relations into structures.
+
+Relations can be key to understanding (changes in)
+
+- macro-structures or micro-structures
+- the distribution of attributes within those structures
+- or even what those structures consist of
+]
+
+---
+class: center, middle
+
+![](https://www.seekpng.com/png/detail/783-7835409_contemporary-social-network-analysis-was-formalized-analyze-the.png)
+
+---
+## Terminology
+
+- .red[Graph] or .red[network], `\(G = (V, E)\)`
+- .red[Vertices] or .red[nodes] from a .red[node set] or .red[mode], `\(V = \{a,b,c,...\}\)`
+- .red[Edges] or .red[ties] (also links, lines, connections, arcs), `\(E = \{\{a,b\}, \{b,c\}, ...\}\)`
+
+--
+
+.pull-left-1[
+
+- (un)directed
+- (un)weighted
+- (un)labelled
+- (un)signed
+- simple/complex
+- multiplex
+- multimodal
+- multilevel
+- cross-sectional/longitudinal/event
+]
+
+.pull-right-2[
+![](https://www.researchgate.net/publication/347300725/figure/fig1/AS:969208926044162@1608088823984/Different-types-of-graphs-and-their-corresponding-adjacency-matrix-representations-The.ppm)
+]
+
+---
+.pull-left-3[
+- .red[graphs] pretty and easy to interpret
+- quickly difficult to discern though and results may vary...
+]
+
+.center[![:scale 55%](ISON_L1_Networks_files/figure-html/GraphMat.png)]
+
+.pull-left[
+- .red[edgelists] 2(+) (ordered) columns of numbered/labelled pairs
+- easy in Excel, incl. attributes, and memory efficient
+- more complicated data, statistics, and analysis difficult though
+]
+
+.pull-right[
+- .red[matrices]' rows are senders and cols recipients
+- memory inefficient for sparse networks and somewhat incomprehensible
+- encodes all relational info and quick, flexible analysis
+]
+
+???
+
+- dimensions
+- density
+- outdegrees
+- indegrees
+- isolates
+- reciprocity
+- transitivity
+
+---
+## Let's try a few...
+
+.pull-1[
+&lt;img src="ISON_L1b_Networks_files/figure-html/unnamed-chunk-2-1.png" width="504" /&gt;
+]
+.pull-1[
+
+```
+##      [,1] [,2] [,3] [,4]
+## [1,]    0    0    1    0
+## [2,]    1    0    0    0
+## [3,]    1    0    1    1
+## [4,]    0    1    1    1
+```
+]
+.pull-1[
+
+```
+##   from to
+## 1    1  2
+## 2    1  4
+## 3    2  3
+## 4    2  1
+## 5    3  4
+## 6    4  1
+```
+]
+
+---
+class: middle
+
+## Describing networks
+
+
+
+
+
+.pull-left[
+![](ISON_L1b_Networks_files/figure-html/plotting-1.png)
+]
+
+
+--
+
+.pull-1[
+- _what could this network be of?_
+  - type/format of network
+  - dimensions/density/diameter
+]
+--
+
+.pull-1[
+- _describe the structure..._
+  - centralisation/core
+  - components/communities
+]
+--
+
+.pull-1[
+- _describe the position of nodes..._
+  - isolates/centrality
+  - brokerage and other roles
+]
+--
+
+.pull-1[
+- _describe the situation of ties..._
+  - reciprocal or asymmetric
+  - transitive/cyclical embedded
+]
+
+???
+
+- same group of actors (some composition change allowed)
+- same relational variable (states, not events)
+- some, but not too much change...
+
+The data used are from the Children of Immigrants Study,
+(c) MZES Mannheim, Manfred Kalter.
+
+- social network ties are costly? (low outdegree)
+- individuals form and maintain reciprocal ties?
+- transitivity leads to clustering
+- status hierarchy shapes friendship networks (ties to popular actors)
+- gender/ethnic homophily?
+
+---
+class: center, middle
+# Design
+
+.pull-1[.circleoff[![](https://globalquiz.org/media/pic/400/8340.jpg)]]
+.pull-1[.circleon[![](https://cdn.imgbin.com/14/23/6/imgbin-people-connected-tXALjkJraJY0PjsUKek18tXrH.jpg)]]
+.pull-1[.circleoff[![](https://i.pinimg.com/originals/8a/08/f1/8a08f1d673c8b64ddb067de8d8d879d8.jpg)]]
+
+---
+## Levels of analysis
+
+.pull-left[
+![](ISON_L1b_Networks_files/figure-html/plotting-1.png)
+]
+
+--
+
+.pull-right[
+- .red[Network level] `\((O=1)\)`
+  - e.g. is this network centralized?
+
+- .red[Dyad level] `\((O = n(n-1)/2)\)`
+  - e.g. are similar nodes connected?
+
+- .red[Node level] `\((O = n)\)`
+  - e.g. are some nodes more popular than others?
+]
+
+---
+class: middle
+
+## Types of analysis
+
+.center[
+
+|IV..DV  |Node                                       |Ties                                                      |Network                                       |
+|:-------|:------------------------------------------|:---------------------------------------------------------|:---------------------------------------------|
+|Node    |e.g. does centrality drive success?        |e.g. are friendships formed through attraction/homophily? |e.g. are networks clustered around diversity? |
+|Ties    |e.g. do unequal exchanges drive success?   |e.g. are friendships formed through propinquity?          |e.g. are networks clustered around balance?   |
+|Network |e.g. do brokerage positions drive success? |e.g. are friendships formed through transitivity?         |e.g. are networks coevolving into clustering? |
+]
+
+.footnote[See also Agneessens (2021)]
+&lt;!-- - Network as .red[independent variable] --&gt;
+&lt;!--   - i.e. (how) do ties explain attributes? --&gt;
+&lt;!--   - e.g. is the network structure responsible for who gets what? --&gt;
+
+&lt;!-- - Network as .red[dependent variable] --&gt;
+&lt;!--   - i.e. (how) do attributes explain ties? --&gt;
+&lt;!--   - e.g. is who has what responsible for the network structure? --&gt;
+
+&lt;!-- - Network as .red[interdependent variable] --&gt;
+&lt;!--   - i.e. (how) do attributes and ties coevolve? --&gt;
+&lt;!--   - e.g. are there positive or negative feedback loops? --&gt;
+
+---
+## Dynamic analysis
+
+
+
+![](ISON_L1b_Networks_files/figure-html/plotboth-1.png)
+
+- How do we get from `\(t_1\)` to `\(t_2\)`?
+  - e.g. is it popularity, reciprocity, transitivity, or homophily?
+
+---
+## Ego networks
+
+Usually .red[name generator],
+.red[name interpreter],
+and sometimes .red[name interrelater].
+
+.center[![:scale 65%](https://ars.els-cdn.com/content/image/3-s2.0-B9780123822291000114-f11-02-9780123822291.jpg)]
+
+.pull-left[
++ can analyse larger networks (sampling)
++ compatible with traditional methods (and designs)
++ can study intersecting social circles (focal nodes)
+]
+
+.pull-right[
+- demands traditional assumptions (exchangability)
+- missing structural data (betweenness)
+- recall often biased toward longer-term interactions .small[(Freeman, Romney, &amp; Freeman 1987)]
+- recall inaccurate when reporting perceptions of relationships between third parties .small[(McEvily 2014)]
+]
+
+???
+
+_Name generator_: ego (survey respondent) names important peers on one or more dimensions, e.g. ask for frequency of contact? valence?
+
+_Name interpreter_: ego provides information about these peers (alters' attributes) and the ties that bind them (tie attributes)
+
+_Name interrelater_: ego provides information about the potential ties among peers, e.g. how frequently do these two exchange information?
+
+For more see:
+
+![](https://images-na.ssl-images-amazon.com/images/I/51dI6OU+pKL._SX331_BO1,204,203,200_.jpg)
+
+![](http://assets.cambridge.org/97811071/31439/cover/9781107131439.jpg)
+
+---
+.pull-left[
+## Cognitive social structure
+
+- Also known as a .red[CSS]
+- Asks respondents to report on the structure of relations
+of others in the network from their point of view
+- Then the similarities and discrepancies between the network as reported by individuals in the network is analysed
+- Or the impacts of perceived social structure on outcome is considered, e.g. perceived influence/ popularity
+.footnote[See Krackhardt 1987; Knoke 1998; Knoke et al. 2019]
+]
+
+.pull-right[
+![](https://www.researchgate.net/publication/282047850/figure/fig1/AS:614321356824596@1523477033705/Cognitive-social-structure-components.png)
+]
+
+---
+## Whole networks
+
+Respondents presented with a .red[roster] (complete list of individuals in population of interest; Marsden 1990)
+
+.center[![:scale 36%](http://communication.iresearchnet.com/wp-content/uploads/2019/11/Social-Networks-fig-1.jpg)]
+
+.pull-left[
++ reduces recall bias stemming from unreliably recalling interaction partners’ names
++ reduces perception bias cos reports cross-checked, or not even requested (though see Boda et al)
+]
+
+.pull-right[
+- only possible for small networks or networks where relational data publicly recorded
+- larger rosters also become unreliable (Pustejovsky &amp; Spillane 2009)
+]
+
+---
+## Snowball sampling
+
+.pull-left[
+.center[![:scale 80%](https://www.researchgate.net/profile/Stephen-Borgatti/publication/227085871/figure/fig1/AS:302299076415488@1449085124312/HRS-study-macro-network-largest-connected-component-by-ethnicity-Total-n-193-q.png)]
+
+Needle sharing among IV drug users in Hartford, CT
+]
+
+.pull-right[
+some .red[seed nodes] recommend others, who recommend more, usw;
+a non-probability sampling method that concentrates on most accessible part of the population
+
+- cheap, simple, and cost-efficient
+- easy way into hard-to-reach (small, covert) groups
+
+But
+
+- oversamples most public and well connected (more often
+seeds and lie on more recruitment paths) and may miss isolated/weakly connected individuals/groups
+- biases towards particular network structures (like high degree) and not representative
+
+Respondent-driven sampling (RDS) aims to mitigate some of these concerns by weighting the sample to compensate for non-random recruitment patterns
+]
+
+---
+## Boundaries
+
+.center[![:scale 30%](ISON_L1b_Networks_files/figure-html/plotting-1.png)]
+
+--
+
+.pull-1[
+- .red[Relational approach] (i.e. connected):
+  - e.g. all “relations” connected socially to main/ seed individuals
+]
+
+.pull-1[
+- .red[Event-based approach] (i.e. attendance):
+  - e.g. all “regulars” that go to the beach each day for 3 days
+]
+
+.pull-1[
+- .red[Positional approach] (i.e. characteristics):
+  - e.g. all “employees” employed by an organization
+]
+
+???
+
+- Ego, e.g. Bott
+- CSS, e.g. Krackhardt
+- Snowball, e.g. Kaplan
+- Complete, e.g. Snijders
+
+- Cross sectional networks (MAN/MNA)
+- Longitudinal (panels)
+- Continuous (events)
+
+---
+## Sources
+
+.pull-left[
+#### Self-reports
+- Surveys .small[(e.g. Hogan et al 2016)]
+  - using e.g. [Network Canvas](https://networkcanvas.com)
+  - name generators vs rosters
+- Interviews .small[(e.g. Bellotti 2014)]
+
+#### Constructions
+- Web-scraping
+  - Chrome or Firefox extensions
+  - Rcrawler, rvest and vosonSML packages
+  - Python (e.g. to access Twitter API)
+- Manual/automatic text coding
+  - Considerable literature-based datasets
+  - Can extract relationships (e.g. similarities) in or across documents
+]
+
+.pull-right[
+#### Observation
+- Participant observation .small[(e.g. Wyatt et al 2011)]
+- RFID badges .small[(e.g. Elmer et al 2018)]
+
+#### Archives
+- Individual
+  - Diary research .small[(e.g. Fu 2008)]
+  - Historical records .small[(e.g. Padgett &amp; Ansell 1993)]
+  - Social media .small[(e.g. Golder et al 2007)]
+  - Communication logs .small[(e.g. Goldberg et al 2016)]
+- Organizational
+  - Publication or patent records .small[(e.g. Lazega et al 2008, Goetze 2010)]
+  - Agreement data between countries .small[(e.g. Hollway and Koskinen 2016)]
+]
+
+???
+
+- Network Canvas - beta/open source
+- egoweb 2.0 (David Kennedy at Rand) - free/open source
+- RedCap - one week free trial
+- Limesurvey - free-`$$`; installing on Institute server requires IT
+- Qualtrics - limited account free; advanced features `$$`
+- Can include a JavaScript autocomplete function (Timon Elmer)
+- ONA Surveys - limited export free, range of export formats by subscription
+- Voxco (Jason Diasno) - `$$`
+- Socioworks - `$$`
+- Kronenwett &amp; Adolphs - `$$$`
+- DatStat Illume Next (Michelle Loxley)
+
+---
+background-color: #96BCC6
+
+.pull-left[
+## Ethical concerns
+
+- Consider study ethics from initial research design
+  - IRB reviews
+  - Report in publications
+
+- Study participation needs
+  - voluntary, informed consent
+  - minimal intrusiveness
+  - appropriate protections of privacy
+
+- One of the main advantages of networks is also a source of greatest ethical concern...
+  - _what is it?_
+]
+
+.pull-right[![](https://talkroute.com/wp-content/uploads/2016/02/ethical-business-talkroute-e1456238028542.jpg)]
+
+---
+
+.pull-left[.center[![:scale 75%](https://www.researchgate.net/profile/Dorothy-Espelage/publication/314204848/figure/fig1/AS:643801722912768@1530505700607/Visualization-of-missing-social-network-data-Nodes-represent-individuals-and-directed.png)]]
+
+.pull-right[
+## Missing data
+
+- Unfortunately, even a small fraction of missing observations could significantly bias network structure
+
+  - A single non-response in a large survey is `\(1\)` missing observation
+
+  - A single non-response in networks is `\(n-1\)` missing observations
+  
+  - And what do you do with ties with missing targets?
+
+  - Moreover, often not missing at random...
+
+.footnote[de la Haye 2017]
+]
+
+---
+## Demanding data
+
+.pull-left[
+- Networks is demanding of data
+  - But true of all attempts at providing persuasive evidence for causality
+
+- Where data comes from is crucial because:
+  - how meaningful your descriptive or inferential conclusions depends on tie-data being meaningful
+
+- So, with an eye to your final report, think about where you might get as meaningful, complete, whole-network data, ideally over time (as granular as possible) and with plenty of additional data on other ties and other attributes...
+
+- No big deal, right?
+]
+
+.pull-right[![](https://memegenerator.net/img/instances/75304621.jpg)]
+
+---
+class: center, middle
+# Data
+
+.pull-1[.circleoff[![](https://globalquiz.org/media/pic/400/8340.jpg)]]
+.pull-1[.circleoff[![](https://cdn.imgbin.com/14/23/6/imgbin-people-connected-tXALjkJraJY0PjsUKek18tXrH.jpg)]]
+.pull-1[.circleon[![](https://i.pinimg.com/originals/8a/08/f1/8a08f1d673c8b64ddb067de8d8d879d8.jpg)]]
+
+---
+## Most important lesson
+
+.pull-left[![](https://cdn.imgbin.com/14/23/6/imgbin-people-connected-tXALjkJraJY0PjsUKek18tXrH.jpg)]
+
+.pull-right[
+- Most important takeaway: Always ask what a tie **means**
+
+  - What does _“already knowing”_ mean?
+
+  - How can we interpret different weights/ structures?
+]
+
+---
+background-color: #F6D0B9
+
+## Tie content
+
+.pull-left-1[
+_Actions_
+- talks to
+- sells to
+- gives aid/advice to
+- sleeps with
+
+_Cognitive-affective_
+- likes
+- knows
+- despises
+- recognises
+
+_Role-based_
+- kinship: brother of, daughter of
+- social: friend of, competitor of
+- organisational: boss of, teacher of
+]
+
+.pull-right-2[![](https://ideas.ted.com/wp-content/uploads/sites/3/2018/06/featured_art_istock1.jpg)]
+
+--
+
+.pull-right-2[
+_Remember_: 
+Ties can be directed/undirected, weighted/unweighted, 
+signed/unsigned, labelled/unlabelled, simple/complex,
+uniplex/multiplex, unimodal/multimodal, etc..]
+
+---
+background-color: black
+class: inverse
+
+.pull-left[
+## Pipes
+
+.center[![](https://116kxc3yni1m23llck48qpul-wpengine.netdna-ssl.com/wp-content/uploads/2019/08/PVC-Plumbing-Pipes-Best-Materials-for-Water-Pipes.jpg)]
+
+- network ties often seen as “plumbing” through which “stuff” flows
+- stuff can be ideas, “capital”, etc
+- micro questions about position, inequality, etc
+- macro questions about network intervention, resilience, etc
+]
+
+--
+
+.pull-right[
+## Prisms
+
+.center[![:scale 52%](https://wallpaperaccess.com/full/2316694.jpg)]
+
+- network ties also serve as informational “cues”
+- cues can be to identity, preferences, etc
+- micro questions about how local networks affect perception
+- macro questions about emergent cultures from certain network topologies
+]
+
+---
+## Networks and culture
+
+.pull-left-1[![:scale 75%](https://pup-assets.imgix.net/onix/images/9780691137155.jpg)]
+
+.pull-right-2[
+- structure long linked with culture (e.g. Berger and Luckmann, Bourdieu, Douglas)
+
+- 1970s “breakthrough” established social networks as method of structural analysis distinct from cultural analysis and Parsonian normative theory (Blau, White et al 1976)
+
+- today tentative reconciliation in different directions:
+  - ties affect culture (Erickson, Krackhardt, Kilduff, Carley, DiMaggio)
+  - culture affects ties (symbolic interactionalism/ cultural sociology of Emirbayer and Goodwin, Lizardo, Daisy)
+  - a duality understanding (White 1992, Breiger, Fuhse, Mische)
+]
+
+.footnote[See Mische (2011); Fuhse (2021)]
+
+---
+class: middle
+
+## Network theory
+
+Model | Social Capital | Social Homogeneity
+--------|---------|---------
+  | (explaining success) | (explaining choice)
+**Network flow model** | Capitalization | Contagion
+(ties as pipes) | (e.g. weak ties) | (e.g. diffusion)
+**Network coordination model** | Cooperation | Convergence
+(ties as bonds) | (e.g. exchange) | (e.g. equivalence)
+
+.footnote[Borgatti and Halgin (2011)]
+
+---
+## Multilevel/multimodal meaning
+
+.pull-left[
+- Social-ecological networks: Bodin et al 2006
+- Social-semantic networks: Roth et al 2010
+- Social-organizational networks: Hollway et al 2017
+- Social-political networks: Knoke et al 2021
+
+.center[![](http://assets.cambridge.org/97811088/33509/cover/9781108833509.jpg)]
+]
+
+.pull-right[
+&gt; “Political actors are creative and resourceful
+[...] the fields, arenas, or social spaces in which political contestation takes place are never unidimensional but contain multiple types of actors and relations.
+Political actors turn to or create new categories of cooperation or contestation in their efforts to build resources or flank those with whom they disagree.” 
+
+&gt; ~ Knoke et al (2021): 1.
+]
+
+---
+## Social Networks
+
+**Assumption**: social life is associative, and relations are meaningful
+
+**Premise**: how social entities are connected matters
+
+**Argument**: more interdependent and contextual than traditional quantitative or qualitative work
+  - By taking context and dependencies into account, even making them central to the explanation,
+  networks goes beyond traditional statistics
+  - By using graph theoretic concepts and formal measures, even scaling them to large settings,
+  networks goes beyond traditional case studies
+
+**Promise**: to help understand social, relational life
+
+---
+.pull-left[
+### Don’t “do networks” to
+
+- join .red[hot research area] (though it is)
+- present .red[fancy pictures] (seldom enough)
+- present .red[fancy analysis] (depends on data quality)
+- .red[explain more variance] (not simply an add-on)
+- .red[explain everything] (empirical settings are messy)
+- use .red[big data] (RQ and theory relationship required)
+- use .red[networks expertise] (clear motivation required)
+]
+
+--
+.pull-right[
+### Do “do networks” to
+
+- .red[describe social structures], both local and global
+- .red[identify individuals] in specal positions
+- correlate .red[positions with individual outcomes]
+- correlate .red[structures with global outcomes]
+- explain .red[how individuals affect social structure]
+- explain .red[how social structure affects individuals]
+- understand .red[how micro and macro outcomes relate]
+- understand .red[how different networks relate]
+- understand .red[how different mechanisms change or sustain social systems]
+]
+
+---
+class: center, middle
+# Summary
+
+.pull-1[.circleon[![](https://globalquiz.org/media/pic/400/8340.jpg)]]
+.pull-1[.circleon[![](https://cdn.imgbin.com/14/23/6/imgbin-people-connected-tXALjkJraJY0PjsUKek18tXrH.jpg)]]
+.pull-1[.circleon[![](https://i.pinimg.com/originals/8a/08/f1/8a08f1d673c8b64ddb067de8d8d879d8.jpg)]]
+
+--
+
+.pull-left[.pull-down[What questions do you have for me?]]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>`"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
